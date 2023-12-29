@@ -20,3 +20,4 @@
 - delete functionality
 - modal for delete confirmation
 - Tailwind css
+- modal for editing of title or description

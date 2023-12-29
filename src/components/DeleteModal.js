@@ -6,20 +6,20 @@ const DeleteModal = ({ show, task, onConfirm, onExit }) => {
   }
   return (
     <div>
-      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black opacity-70 ">
-        <div className="bg-white p-8 rounded-lg">
-          <p className="text-xl font-semibold mb-4">
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center backdrop-blur-sm ">
+        <div className="bg-white p-8 rounded-lg  z-50 flex flex-col ">
+          <p className="text-xl font-bold mb-4 text-black">
             Are you sure want to delete this task?
           </p>
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <button
-              className="bg-red-700 text-white px-4 py-2 mr-2 rounded-lg"
+              className="bg-red-700 text-white px-4 py-2 mr-4 rounded-lg hover:bg-red-900"
               onClick={onConfirm}
             >
               Confirm Delete
             </button>
             <button
-              className="bg-gray-500 text-white px-4 py-2 mr-2 rounded-lg"
+              className="bg-gray-500 text-white px-4 py-2 mr-2 rounded-lg hover:bg-gray-700"
               onClick={onExit}
             >
               Exit Delete
