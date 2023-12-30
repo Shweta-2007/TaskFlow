@@ -23,3 +23,4 @@
 - modal for editing of title or description
 - error handling for title and description
 - fixed CSS for task priority and task status
+- Made it Responsive

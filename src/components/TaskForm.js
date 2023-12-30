@@ -14,24 +14,27 @@ const TaskForm = ({
   handleAddTask,
 }) => {
   return (
-    <div className="flex justify-center flex-col md:flex-row items-center mt-10">
+    <div className="flex  justify-center  flex-col   md:flex-col lg:flex-row lg:flex-wrap  xl:flex-row items-center  md:mt-10 mt-2 overflow-hidden ">
       <div>
-        <label className="block mb-2 text-xl" htmlFor="number">
-          No.
+        <label
+          className="block mb-2 md:text-xl text-base lg:-mt-3 "
+          htmlFor="number"
+        >
+          Sl.No.
         </label>
         <input
-          className={`text-xl text-black mr-6 p-2 w-16 `}
+          className={`text-xl text-black mr-6 p-2 md:w-16 w-12 h-8 md:h-auto lg:mr-10 `}
           type="number"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
       </div>
       <div>
-        <label className="block mb-2 text-xl" htmlFor="title">
+        <label className="block mb-2  md:text-xl text-base " htmlFor="title">
           Title
         </label>
         <input
-          className=" text-xl text-black mr-6 p-2 "
+          className=" md:text-xl text-lg text-black mr-6 p-2  md:w-auto  w-full h-8 md:h-auto mb-2 lg:mr-10 "
           type="text"
           placeholder="Title"
           value={title}
@@ -40,11 +43,14 @@ const TaskForm = ({
       </div>
 
       <div>
-        <label className="block mb-2 text-xl" htmlFor="description">
+        <label
+          className="block mb-2 md:text-xl text-base"
+          htmlFor="description"
+        >
           Description
         </label>
         <input
-          className=" text-xl text-black mr-6 p-2"
+          className=" md:text-xl text-lg text-black mr-6 p-2 md:w-auto  w-full h-8 md:h-auto mb-2 lg:mr-10 "
           type="text"
           placeholder="Enter Description"
           value={description}
@@ -52,11 +58,11 @@ const TaskForm = ({
         />
       </div>
       <div>
-        <label className="block mb-2 text-xl" htmlFor="dueDate">
+        <label className="block mb-2 md:text-xl text-base" htmlFor="dueDate">
           Due Date
         </label>
         <input
-          className=" text-black mr-6 p-2"
+          className=" text-black mr-6 p-2 md:w-auto  w-full h-8 md:h-auto mb-2 lg:mr-10 "
           type="date"
           placeholder="Due Date"
           value={dueDate}
@@ -65,12 +71,12 @@ const TaskForm = ({
       </div>
 
       <div>
-        <label htmlFor="priority" className="block mb-2 text-xl">
+        <label htmlFor="priority" className="block mb-2 md:text-xl text-base">
           Task Priority
         </label>
         <select
           id="priority"
-          className="bg-white text-black font-bold mr-6 p-1 px-4"
+          className="bg-white text-black font-bold mr-6 p-1 px-4 md:w-auto  w-full h-8 md:h-auto mb-2 lg:mr-10"
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
@@ -82,12 +88,12 @@ const TaskForm = ({
       </div>
 
       <div>
-        <label htmlFor="status" className="block mb-2 text-xl">
+        <label htmlFor="status" className="block mb-2 md:text-xl text-base">
           Task Status
         </label>
         <select
           id="status"
-          className="bg-white text-black font-bold p-1"
+          className="bg-white text-black font-bold p-1 md:w-auto  w-full h-8 md:h-auto mb-4 lg:mr-5 "
           value={status}
           onChange={(e) => setStatus(e.target.value)}
         >
@@ -99,7 +105,7 @@ const TaskForm = ({
       </div>
 
       <button
-        className=" bg-green-800 text-white rounded-lg p-2 px-4 ml-4 -mb-7 "
+        className=" bg-green-800 text-white rounded-lg p-2 px-4 ml-4 md:-mb-5  "
         onClick={handleAddTask}
       >
         Add Task

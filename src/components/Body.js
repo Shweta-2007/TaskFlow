@@ -83,8 +83,10 @@ const Body = () => {
   };
 
   return (
-    <div className={`m-4 p-4 text-white bg-black h-screen  `}>
-      <h1 className="text-center   font-bold text-4xl  p-2  mt-8 ">
+    <div
+      className={` md:m-4 m-2 md:p-4 p-2 text-white overflow-hidden min-h-screen bg-black  `}
+    >
+      <h1 className="text-center bg-blue-900   font-bold text-4xl  p-2  md:mt-8  ">
         Task-Flow
       </h1>
       {error ? (
