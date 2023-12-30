@@ -16,13 +16,13 @@ const DeleteModal = ({ show, task, onConfirm, onExit }) => {
               className="bg-red-700 text-white px-4 py-2 mr-4 rounded-lg hover:bg-red-900"
               onClick={onConfirm}
             >
-              Confirm Delete
+              Confirm
             </button>
             <button
               className="bg-gray-500 text-white px-4 py-2 mr-2 rounded-lg hover:bg-gray-700"
               onClick={onExit}
             >
-              Exit Delete
+              Cancel
             </button>
           </div>
         </div>

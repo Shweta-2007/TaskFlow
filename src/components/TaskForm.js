@@ -1,5 +1,3 @@
-import React from "react";
-
 const TaskForm = ({
   title,
   setTitle,
@@ -16,13 +14,13 @@ const TaskForm = ({
   handleAddTask,
 }) => {
   return (
-    <div className="flex justify-center items-center mt-10">
+    <div className="flex justify-center flex-col md:flex-row items-center mt-10">
       <div>
         <label className="block mb-2 text-xl" htmlFor="number">
           No.
         </label>
         <input
-          className=" text-xl text-black mr-6 p-2 w-16 "
+          className={`text-xl text-black mr-6 p-2 w-16 `}
           type="number"
           value={number}
           onChange={(e) => setNumber(e.target.value)}

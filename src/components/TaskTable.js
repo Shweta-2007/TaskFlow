@@ -20,18 +20,51 @@ const TaskTable = ({ tasks, handleEditTask, handleDeleteTask }) => {
             <td className="p-2 border-r border-white">{task.title}</td>
             <td className="p-2 border-r border-white">{task.description}</td>
             <td className="p-2 border-r border-white">{task.dueDate}</td>
-            <td className="p-2 border-r border-white">{task.priority}</td>
-            <td className="p-2 border-r border-white">{task.status}</td>
+            <td className={`p-2 border-r border-white`}>
+              <span
+                className={`
+      ${task.priority === "High" ? "bg-orange-700 px-4 py-0.5 rounded-md" : ""}
+      ${task.priority === "Medium" ? "bg-blue-600 px-4 rounded-md py-0.5 " : ""}
+      ${task.priority === "Low" ? "bg-green-600 px-4 rounded-md py-0.5 " : ""}
+    `}
+              >
+                {task.priority}
+              </span>
+            </td>
+
+            <td className="p-2 border-r border-white">
+              <span
+                className={`
+              ${
+                task.status === "Pending"
+                  ? "bg-yellow-600 px-4 rounded-md py-0.5"
+                  : " "
+              }
+              ${
+                task.status === "Inprogress"
+                  ? "bg-violet-700 px-4 py-0.5 rounded-md "
+                  : ""
+              }
+              ${
+                task.status === "Completed"
+                  ? "bg-red-700 px-4 py-0.5 rounded-md "
+                  : ""
+              }
+              `}
+              >
+                {task.status}
+              </span>
+            </td>
             <td className="p-2">
               <button
                 onClick={() => handleEditTask(task)}
-                className="bg-green-800 text-white px-4 mr-3 rounded-md"
+                className="bg-green-800 text-white px-4 mr-3 rounded-md py-0.5"
               >
                 Edit
               </button>
               <button
                 onClick={() => handleDeleteTask(task)}
-                className="bg-green-800 text-white px-4 rounded-md"
+                className="bg-green-800 text-white px-4 py-0.5 rounded-md"
               >
                 Delete
               </button>

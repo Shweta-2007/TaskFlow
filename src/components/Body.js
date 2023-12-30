@@ -18,12 +18,18 @@ const Body = () => {
 
   const [showEditModal, setShowEditModal] = useState(false);
   const [taskToEdit, setTaskToEdit] = useState("");
+  const [error, setError] = useState("");
 
   const dispatch = useDispatch();
 
   const tasks = useSelector((store) => store.tasks);
 
   const handleAddTask = () => {
+    if (!title || !description) {
+      setError("Please enter title and description!");
+      return;
+    }
+
     const newTask = {
       id: Date.now(),
       title,
@@ -40,6 +46,7 @@ const Body = () => {
     setPriority("");
     setStatus("");
     setNumber("");
+    setError("");
   };
 
   const handleDeleteTask = (task) => {
@@ -80,6 +87,11 @@ const Body = () => {
       <h1 className="text-center   font-bold text-4xl  p-2  mt-8 ">
         Task-Flow
       </h1>
+      {error ? (
+        <p className="text-white bg-red-700 text-center mt-2 ">{error}</p>
+      ) : (
+        ""
+      )}
 
       <TaskForm
         title={title}

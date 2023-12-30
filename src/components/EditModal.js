@@ -1,4 +1,3 @@
-// EditModal.js
 import React, { useState } from "react";
 
 const EditModal = ({ show, task, onEdit, onClose }) => {
