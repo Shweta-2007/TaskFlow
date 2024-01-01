@@ -24,3 +24,18 @@
 - error handling for title and description
 - fixed CSS for task priority and task status
 - Made it Responsive
+- installed redux-saga
+- set api.js
+- set sagas.js
+- updated appStore.js
+- updated tasksSlice.js
+
+# Features
+
+- Add task
+- Edit title and description
+- Delete whole task
+
+# Requirements
+
+- Both title and description are mandatory.

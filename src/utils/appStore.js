@@ -1,20 +1,20 @@
-// appStore.js
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import tasksReducer from "./tasksSlice";
-import tasksSaga from "./tasksSaga";
+import rootSaga from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
-const appStore = configureStore({
+const store = configureStore({
   reducer: {
     tasks: tasksReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(sagaMiddleware),
+  middleware: (getDefaultMiddleware) => [
+    sagaMiddleware,
+    ...getDefaultMiddleware(),
+  ],
 });
 
-// Run your Sagas
-sagaMiddleware.run(tasksSaga);
+sagaMiddleware.run(rootSaga);
 
-export default appStore;
+export default store;
