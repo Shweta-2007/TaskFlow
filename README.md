@@ -29,6 +29,7 @@
 - set sagas.js
 - updated appStore.js
 - updated tasksSlice.js
+- Deployment: @Netlify
 
 # Features
 
