@@ -39,17 +39,17 @@ const TaskTable = ({ tasks, handleEditTask, handleDeleteTask }) => {
                   className={`
               ${
                 task.status === "Pending"
-                  ? "bg-yellow-600 px-4 rounded-md py-0.5"
+                  ? "bg-red-600 px-4 rounded-md py-0.5"
                   : " "
               }
               ${
                 task.status === "Inprogress"
-                  ? "bg-violet-700 px-4 py-0.5 rounded-md "
+                  ? "bg-yellow-600 px-4 py-0.5 rounded-md "
                   : ""
               }
               ${
                 task.status === "Completed"
-                  ? "bg-red-700 px-4 py-0.5 rounded-md "
+                  ? "bg-green-600 px-4 py-0.5 rounded-md "
                   : ""
               }
               `}

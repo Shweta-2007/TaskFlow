@@ -25,6 +25,7 @@ const TaskForm = ({
         <input
           className={`text-xl text-black mr-6 p-2 md:w-16 w-12 h-8 md:h-auto lg:mr-10 `}
           type="number"
+          min={0}
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
