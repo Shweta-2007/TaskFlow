@@ -2,7 +2,7 @@ import React from "react";
 
 const TaskTable = ({ tasks, handleEditTask, handleDeleteTask }) => {
   return (
-    <div className=" md:overflow-x-hidden overflow-x-auto">
+    <div className="md:overflow-x-hidden overflow-x-auto">
       <table className="m-4 md:mt-20 mt-10 p-4 text-center w-full border-collapse border border-white">
         <thead>
           <tr className=" border border-b-white">
@@ -57,7 +57,7 @@ const TaskTable = ({ tasks, handleEditTask, handleDeleteTask }) => {
                   {task.status}
                 </span>
               </td>
-              <td className="p-2 flex justify-center items-center py-1 md:mt-0 mt-3">
+              <td className="p-2 border-r border-white flex justify-center items-center py-1 md:mt-0 mt-3 border-l-0">
                 <button
                   onClick={() => handleEditTask(task)}
                   className="bg-green-800 text-white px-4 mr-3 rounded-md py-0.5"
